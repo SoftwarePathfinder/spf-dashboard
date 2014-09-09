@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="spf-dashboard">
+		<property name="context-root" value="spf-dashboard"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test"/>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/petrillo/.gradle/caches/artifacts-23/filestore/com.sun.faces/jsf-impl/2.2.5/jar/8f0f80d3ebc5a1858b65492969bdb0b0040bdfb5/jsf-impl-2.2.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/petrillo/.gradle/caches/artifacts-23/filestore/org.primefaces/primefaces/5.0/jar/65bdce80509320280b3b5210fcddae9b7d50338/primefaces-5.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/petrillo/.gradle/caches/artifacts-23/filestore/com.sun.faces/jsf-api/2.2.5/jar/795d03ba6dedb299f90f7935939894912b3f5a18/jsf-api-2.2.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/petrillo/.gradle/caches/artifacts-23/filestore/org.primefaces.themes/bootstrap/1.0.10/jar/f5de3f59380e672983c5de3d27f926df580aafb6/bootstrap-1.0.10.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>

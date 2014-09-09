@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+
+<h:form>  
+    <p:growl id="messages"/>
+ 
+    <p:menubar>
+        <p:menuitem value="Dashboard" url="#" />
+        <p:submenu label="Projects">
+            <p:menuitem value="New" url="#" />
+            <p:separator />
+            <p:menuitem value="Search" url="#" />
+        </p:submenu>
+ 
+        <p:submenu label="Query">
+            <p:menuitem value="SQL Console" url="#" />
+            <p:menuitem value="Cypher Console" url="#"  />
+        </p:submenu>
+        
+        <p:submenu label="Analysis">
+            <p:menuitem value="Metrics" url="#" />
+            <p:menuitem value="Reports" url="#"  />
+        </p:submenu>
+        
+        <p:submenu label="Visualizations">
+            <p:menuitem value="Global" url="#" />
+            <p:menuitem value="Polymorphic View" url="#"  />
+        </p:submenu>
+
+        <p:submenu label="Tools">
+            <p:menuitem value="Export" url="#" />
+            <p:menuitem value="Forge Manager" url="#"  />
+            <p:menuitem value="Version Control System" url="#"  />
+        </p:submenu>
+
+        <p:submenu label="Preferences">
+            <p:menuitem value="Dashboard" url="#" />
+            <p:menuitem value="Modules" url="#" />
+            <p:menuitem value="Advanced" url="#" />
+        </p:submenu>
+                
+        <p:submenu label="Help">
+            <p:menuitem value="Contents" url="#" />
+            <p:menuitem value="About" url="#" />
+        </p:submenu>
+ 
+        <f:facet name="options">
+            <p:inputText style="margin-right:10px" placeholder="Search"/>
+        </f:facet>
+    </p:menubar>
+</h:form>
+
+</h:body>
+</html>
