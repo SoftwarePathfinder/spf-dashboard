@@ -1,63 +1,200 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<meta charset="utf-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<title>Software Pathfinder - Dashboard</title>
+	<style>
+		a,
+		a:hover,
+		a:visited {
+			color: #000;
+		}
+	
+		body {
+			font-size: 12px;
+			font-family: arial, verdana, tahoma;
+			margin-bottom: 20px;
+		}
+
+		.page-header {
+			font-size: 1.5em;
+			margin: 1em;
+			text-align: center;
+			border-bottom: 1px solid #ddd;
+		}
+		
+		.page-content {}
+		
+		.page-footer {
+			background-color: #fff;
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 0.5em;
+			text-align: right;
+		}
+		
+		.toolbar {
+			padding: 1em;
+		}
+		
+		.toolbar .title {
+			font-size: 2em;
+		}
+		
+		.toolbar button {
+			float: right;
+		}
+		
+		.project-card {
+			position: relative;
+			display: inline-block;
+			width: 30%;
+			min-width: 200px;
+			height: 200px;
+			border: 2px solid #888;
+			padding: 1em;
+			margin: 0.5em;
+			border-radius: 4px;
+		}
+
+		.project-card .title {
+			display: block;
+			font-size: 1.5em;
+			text-align: center;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		
+		.project-card .progress {
+			position: absolute;
+			margin-bottom: 0;
+			position: absolute;
+			bottom: 1em;
+			left: 1em;
+			right: 1em;
+		}
+
+		.project-card .ui-progressbar {
+			margin-bottom: 0;
+		}
+		
+	</style>
 </h:head>
 <h:body>
 
-<h:form>  
-    <p:growl id="messages"/>
- 
-    <p:menubar>
-        <p:menuitem value="Dashboard" url="#" />
-        <p:submenu label="Projects">
-            <p:menuitem value="New" url="#" />
-            <p:separator />
-            <p:menuitem value="Search" url="#" />
-        </p:submenu>
- 
-        <p:submenu label="Query">
-            <p:menuitem value="SQL Console" url="#" />
-            <p:menuitem value="Cypher Console" url="#"  />
-        </p:submenu>
-        
-        <p:submenu label="Analysis">
-            <p:menuitem value="Metrics" url="#" />
-            <p:menuitem value="Reports" url="#"  />
-        </p:submenu>
-        
-        <p:submenu label="Visualizations">
-            <p:menuitem value="Global" url="#" />
-            <p:menuitem value="Polymorphic View" url="#"  />
-        </p:submenu>
+<header class="page-header">
+	<h1>Software Pathfinder</h1>
+</header>
 
-        <p:submenu label="Tools">
-            <p:menuitem value="Export" url="#" />
-            <p:menuitem value="Forge Manager" url="#"  />
-            <p:menuitem value="Version Control System" url="#"  />
-        </p:submenu>
+<section id="page-content">
+	<div class="toolbar">
+		<span class="title">Projects</span>
+		<p:button value="Add" class="btn glyphicon glyphicon-plus"/>
+	</div>
+	
+	<article class="project-card">
+		<a href="#" class="title">Software Pathfinder</a>
+		<div class="progress">
+			<p:progressBar value="100" labelTemplate="100%"/>
+		</div>
+	</article>
 
-        <p:submenu label="Preferences">
-            <p:menuitem value="Dashboard" url="#" />
-            <p:menuitem value="Modules" url="#" />
-            <p:menuitem value="Advanced" url="#" />
-        </p:submenu>
+	<article class="project-card">
+		<a href="#" class="title">JBoss AS</a>
+		<div class="progress">
+			<p:progressBar value="50" labelTemplate="50%"/>
+		</div>
+	</article>
+
+	<article class="project-card">
+		<a href="#" class="title">Hibernate ORM</a>
+		<div class="progress">
+			<p:progressBar value="30" labelTemplate="30%"/>
+		</div>
+	</article>
+
+	<article class="project-card">
+		<a href="#" class="title">Apache Tomcat</a>
+		<div class="progress">
+			<p:progressBar value="5" labelTemplate="5%"/>
+		</div>
+	</article>
+
+	<article class="project-card">
+		<a href="#" class="title">Google Guava</a>
+		<div class="progress">
+			<p:progressBar value="20" labelTemplate="20%"/>
+		</div>
+	</article>
+
+	<article class="project-card">
+		<a href="#" class="title">Apache Hadoop</a>
+		<div class="progress">
+			<p:progressBar value="0" labelTemplate="0%"/>
+		</div>
+	</article>
+
+</section>
+
+<footer class="page-footer">
+	Powered by Software Pathfinder 2014
+</footer>	
+
+<!-- <h:form>   -->
+<!--     <p:growl id="messages"/> -->
+ 
+<!--     <p:menubar> -->
+<!--         <p:menuitem value="Dashboard" url="#" /> -->
+<!--         <p:submenu label="Projects"> -->
+<!--             <p:menuitem value="New" url="#" /> -->
+<!--             <p:separator /> -->
+<!--             <p:menuitem value="Search" url="#" /> -->
+<!--         </p:submenu> -->
+ 
+<!--         <p:submenu label="Query"> -->
+<!--             <p:menuitem value="SQL Console" url="#" /> -->
+<!--             <p:menuitem value="Cypher Console" url="#"  /> -->
+<!--         </p:submenu> -->
+        
+<!--         <p:submenu label="Analysis"> -->
+<!--             <p:menuitem value="Metrics" url="#" /> -->
+<!--             <p:menuitem value="Reports" url="#"  /> -->
+<!--         </p:submenu> -->
+        
+<!--         <p:submenu label="Visualizations"> -->
+<!--             <p:menuitem value="Global" url="#" /> -->
+<!--             <p:menuitem value="Polymorphic View" url="#"  /> -->
+<!--         </p:submenu> -->
+
+<!--         <p:submenu label="Tools"> -->
+<!--             <p:menuitem value="Export" url="#" /> -->
+<!--             <p:menuitem value="Forge Manager" url="#"  /> -->
+<!--             <p:menuitem value="Version Control System" url="#"  /> -->
+<!--         </p:submenu> -->
+
+<!--         <p:submenu label="Preferences"> -->
+<!--             <p:menuitem value="Dashboard" url="#" /> -->
+<!--             <p:menuitem value="Modules" url="#" /> -->
+<!--             <p:menuitem value="Advanced" url="#" /> -->
+<!--         </p:submenu> -->
                 
-        <p:submenu label="Help">
-            <p:menuitem value="Contents" url="#" />
-            <p:menuitem value="About" url="#" />
-        </p:submenu>
+<!--         <p:submenu label="Help"> -->
+<!--             <p:menuitem value="Contents" url="#" /> -->
+<!--             <p:menuitem value="About" url="#" /> -->
+<!--         </p:submenu> -->
  
-        <f:facet name="options">
-            <p:inputText style="margin-right:10px" placeholder="Search"/>
-        </f:facet>
-    </p:menubar>
-</h:form>
+<!--         <f:facet name="options"> -->
+<!--             <p:inputText style="margin-right:10px" placeholder="Search"/> -->
+<!--         </f:facet> -->
+<!--     </p:menubar> -->
+<!-- </h:form> -->
 
 </h:body>
 </html>
