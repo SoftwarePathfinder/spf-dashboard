@@ -14,7 +14,7 @@
 		a:visited {
 			color: #000;
 		}
-	
+
 		body {
 			font-size: 12px;
 			font-family: arial, verdana, tahoma;
@@ -96,7 +96,10 @@
 <section id="page-content">
 	<div class="toolbar">
 		<span class="title">Projects</span>
-		<p:button value="Add" class="btn glyphicon glyphicon-plus"/>
+		<p:outputLabel value="#{projectBean.project.name}"/>
+		<h:form>
+			<p:commandButton value="Add" action="#{projectBean.add}"/>
+		</h:form>
 	</div>
 	
 	<article class="project-card">
@@ -145,56 +148,7 @@
 
 <footer class="page-footer">
 	Powered by Software Pathfinder 2014
-</footer>	
-
-<!-- <h:form>   -->
-<!--     <p:growl id="messages"/> -->
- 
-<!--     <p:menubar> -->
-<!--         <p:menuitem value="Dashboard" url="#" /> -->
-<!--         <p:submenu label="Projects"> -->
-<!--             <p:menuitem value="New" url="#" /> -->
-<!--             <p:separator /> -->
-<!--             <p:menuitem value="Search" url="#" /> -->
-<!--         </p:submenu> -->
- 
-<!--         <p:submenu label="Query"> -->
-<!--             <p:menuitem value="SQL Console" url="#" /> -->
-<!--             <p:menuitem value="Cypher Console" url="#"  /> -->
-<!--         </p:submenu> -->
-        
-<!--         <p:submenu label="Analysis"> -->
-<!--             <p:menuitem value="Metrics" url="#" /> -->
-<!--             <p:menuitem value="Reports" url="#"  /> -->
-<!--         </p:submenu> -->
-        
-<!--         <p:submenu label="Visualizations"> -->
-<!--             <p:menuitem value="Global" url="#" /> -->
-<!--             <p:menuitem value="Polymorphic View" url="#"  /> -->
-<!--         </p:submenu> -->
-
-<!--         <p:submenu label="Tools"> -->
-<!--             <p:menuitem value="Export" url="#" /> -->
-<!--             <p:menuitem value="Forge Manager" url="#"  /> -->
-<!--             <p:menuitem value="Version Control System" url="#"  /> -->
-<!--         </p:submenu> -->
-
-<!--         <p:submenu label="Preferences"> -->
-<!--             <p:menuitem value="Dashboard" url="#" /> -->
-<!--             <p:menuitem value="Modules" url="#" /> -->
-<!--             <p:menuitem value="Advanced" url="#" /> -->
-<!--         </p:submenu> -->
-                
-<!--         <p:submenu label="Help"> -->
-<!--             <p:menuitem value="Contents" url="#" /> -->
-<!--             <p:menuitem value="About" url="#" /> -->
-<!--         </p:submenu> -->
- 
-<!--         <f:facet name="options"> -->
-<!--             <p:inputText style="margin-right:10px" placeholder="Search"/> -->
-<!--         </f:facet> -->
-<!--     </p:menubar> -->
-<!-- </h:form> -->
+</footer>
 
 </h:body>
 </html>
