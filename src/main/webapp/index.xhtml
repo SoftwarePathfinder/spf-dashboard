@@ -1,154 +1,65 @@
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
-<h:head>
-	<meta charset="utf-8"></meta>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-	<title>Software Pathfinder - Dashboard</title>
-	<style>
-		a,
-		a:hover,
-		a:visited {
-			color: #000;
-		}
-
-		body {
-			font-size: 12px;
-			font-family: arial, verdana, tahoma;
-			margin-bottom: 20px;
-		}
-
-		.page-header {
-			font-size: 1.5em;
-			margin: 1em;
-			text-align: center;
-			border-bottom: 1px solid #ddd;
-		}
-		
-		.page-content {}
-		
-		.page-footer {
-			background-color: #fff;
-			position: fixed;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			padding: 0.5em;
-			text-align: right;
-		}
-		
-		.toolbar {
-			padding: 1em;
-		}
-		
-		.toolbar .title {
-			font-size: 2em;
-		}
-		
-		.toolbar button {
-			float: right;
-		}
-		
-		.project-card {
-			position: relative;
-			display: inline-block;
-			width: 30%;
-			min-width: 200px;
-			height: 200px;
-			border: 2px solid #888;
-			padding: 1em;
-			margin: 0.5em;
-			border-radius: 4px;
-		}
-
-		.project-card .title {
-			display: block;
-			font-size: 1.5em;
-			text-align: center;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-		}
-		
-		.project-card .progress {
-			position: absolute;
-			margin-bottom: 0;
-			position: absolute;
-			bottom: 1em;
-			left: 1em;
-			right: 1em;
-		}
-
-		.project-card .ui-progressbar {
-			margin-bottom: 0;
-		}
-		
-	</style>
-</h:head>
 <h:body>
-
-<header class="page-header">
-	<h1>Software Pathfinder</h1>
-</header>
-
-<section id="page-content">
-	<div class="toolbar">
-		<span class="title">Projects</span>
-		<p:outputLabel value="#{projectBean.project.name}"/>
-		<h:form>
-			<p:commandButton value="Add" action="#{projectBean.add}"/>
-		</h:form>
-	</div>
 	
-	<article class="project-card">
-		<a href="#" class="title">Software Pathfinder</a>
-		<div class="progress">
-			<p:progressBar value="100" labelTemplate="100%"/>
+	<ui:composition template="/template/main.xhtml">
+	<ui:define name="content">
+
+		<div class="toolbar">
+			<span class="title">Projects</span>
+			<p:outputLabel value="#{projectBean.project.name}"/>
+			<h:form>
+				<p:commandButton value="Add" action="#{projectBean.add}"/>
+			</h:form>
 		</div>
-	</article>
+		
+		<article class="project-card">
+			<a href="#" class="title">Software Pathfinder</a>
+			<div class="progress">
+				<p:progressBar value="100" labelTemplate="100%"/>
+			</div>
+		</article>
+	
+		<article class="project-card">
+			<a href="#" class="title">JBoss AS</a>
+			<div class="progress">
+				<p:progressBar value="50" labelTemplate="50%"/>
+			</div>
+		</article>
+	
+		<article class="project-card">
+			<a href="#" class="title">Hibernate ORM</a>
+			<div class="progress">
+				<p:progressBar value="30" labelTemplate="30%"/>
+			</div>
+		</article>
+	
+		<article class="project-card">
+			<a href="#" class="title">Apache Tomcat</a>
+			<div class="progress">
+				<p:progressBar value="5" labelTemplate="5%"/>
+			</div>
+		</article>
+	
+		<article class="project-card">
+			<a href="#" class="title">Google Guava</a>
+			<div class="progress">
+				<p:progressBar value="20" labelTemplate="20%"/>
+			</div>
+		</article>
+	
+		<article class="project-card">
+			<a href="#" class="title">Apache Hadoop</a>
+			<div class="progress">
+				<p:progressBar value="0" labelTemplate="0%"/>
+			</div>
+		</article>
 
-	<article class="project-card">
-		<a href="#" class="title">JBoss AS</a>
-		<div class="progress">
-			<p:progressBar value="50" labelTemplate="50%"/>
-		</div>
-	</article>
-
-	<article class="project-card">
-		<a href="#" class="title">Hibernate ORM</a>
-		<div class="progress">
-			<p:progressBar value="30" labelTemplate="30%"/>
-		</div>
-	</article>
-
-	<article class="project-card">
-		<a href="#" class="title">Apache Tomcat</a>
-		<div class="progress">
-			<p:progressBar value="5" labelTemplate="5%"/>
-		</div>
-	</article>
-
-	<article class="project-card">
-		<a href="#" class="title">Google Guava</a>
-		<div class="progress">
-			<p:progressBar value="20" labelTemplate="20%"/>
-		</div>
-	</article>
-
-	<article class="project-card">
-		<a href="#" class="title">Apache Hadoop</a>
-		<div class="progress">
-			<p:progressBar value="0" labelTemplate="0%"/>
-		</div>
-	</article>
-
-</section>
-
-<footer class="page-footer">
-	Powered by Software Pathfinder 2014
-</footer>
+	</ui:define>
+	</ui:composition>
 
 </h:body>
 </html>
