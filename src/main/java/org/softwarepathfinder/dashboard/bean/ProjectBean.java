@@ -18,12 +18,12 @@ public class ProjectBean {
 
 	public String add() {
 		System.out.println("Add");
-		return "form";
+		return "project/form";
 	}
 
 	public String edit() {
 		System.out.println("Edit");
-		return "form";
+		return "project/form";
 	}
 
 	public Project getProject() {
