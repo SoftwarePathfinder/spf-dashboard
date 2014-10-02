@@ -16,18 +16,31 @@ public class ProjectBean {
 	private ProjectRepostitory repository;
 
 	public ProjectBean() {
-		//TODO: use DI instead of tihs
-		repository = new ProjectRepostitory();
+		//TODO: use DI instead of this
+		repository = ProjectRepostitory.get();
+		project = new Project();
 	}
 
 	public String add() {
-		System.out.println("Add");
-		return "project/form";
+		return form();
 	}
 
-	public String edit() {
-		System.out.println("Edit");
-		return "project/form";
+	public String edit(Project project) {
+		this.project = project;
+		return form();
+	}
+
+	public String save() {
+		repository.save(project);
+		return list();
+	}
+
+	private String form() {
+		return "/project/form";
+	}
+
+	private String list() {
+		return "/project/list";
 	}
 
 	public List<Project> getProjectList() {

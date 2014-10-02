@@ -10,14 +10,14 @@
 
 		<div class="toolbar">
 			<span class="title">Projects</span>
-			<h:form>
+			<h:form styleClass="button-bar">
 				<p:commandButton value="Add" action="#{projectBean.add}"/>
 			</h:form>
 		</div>
 
 		<ui:repeat var="project" value="#{projectBean.projectList}" >
 			<article class="project-card">
-				<a href="#" class="title"><h:outputLabel value="#{project.name}"/></a>
+				<p:commandLink action="${projectBean.edit(project)}" value="#{project.name}" />
 				<div class="progress">
 					<p:progressBar value="#{project.executionStatus}" labelTemplate="#{project.executionStatus}%"/>
 				</div>

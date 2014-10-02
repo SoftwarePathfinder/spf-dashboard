@@ -7,7 +7,18 @@
 <h:body>
 	<ui:composition template="/template/main.xhtml">
 	<ui:define name="content">
-		Form
+		<h:form>
+			<p:outputLabel value="Name"/>
+			<p:inputText value="#{projectBean.project.name}"/>
+			<br/>
+			<p:outputLabel value="Description"/>
+			<p:inputText value="#{projectBean.project.description}"/>
+			<br/>
+			<p:outputLabel value="Execution Status(Number 0-100)"/>
+			<p:inputText value="#{projectBean.project.executionStatus}"/>
+			<br/>
+			<p:commandButton value="Save" action="#{projectBean.save}"/>
+		</h:form>
 	</ui:define>
 	</ui:composition>
 </h:body>
