@@ -7,57 +7,9 @@
 	
 	<ui:composition template="/template/main.xhtml">
 	<ui:define name="content">
+		<h1>Home</h1>
 
-		<div class="toolbar">
-			<span class="title">Projects</span>
-			<p:outputLabel value="#{projectBean.project.name}"/>
-			<h:form>
-				<p:commandButton value="Add" action="#{projectBean.add}"/>
-			</h:form>
-		</div>
-		
-		<article class="project-card">
-			<a href="#" class="title">Software Pathfinder</a>
-			<div class="progress">
-				<p:progressBar value="100" labelTemplate="100%"/>
-			</div>
-		</article>
-	
-		<article class="project-card">
-			<a href="#" class="title">JBoss AS</a>
-			<div class="progress">
-				<p:progressBar value="50" labelTemplate="50%"/>
-			</div>
-		</article>
-	
-		<article class="project-card">
-			<a href="#" class="title">Hibernate ORM</a>
-			<div class="progress">
-				<p:progressBar value="30" labelTemplate="30%"/>
-			</div>
-		</article>
-	
-		<article class="project-card">
-			<a href="#" class="title">Apache Tomcat</a>
-			<div class="progress">
-				<p:progressBar value="5" labelTemplate="5%"/>
-			</div>
-		</article>
-	
-		<article class="project-card">
-			<a href="#" class="title">Google Guava</a>
-			<div class="progress">
-				<p:progressBar value="20" labelTemplate="20%"/>
-			</div>
-		</article>
-	
-		<article class="project-card">
-			<a href="#" class="title">Apache Hadoop</a>
-			<div class="progress">
-				<p:progressBar value="0" labelTemplate="0%"/>
-			</div>
-		</article>
-
+		<h:outputLink value="project/list.xhtml">Projetos</h:outputLink>
 	</ui:define>
 	</ui:composition>
 

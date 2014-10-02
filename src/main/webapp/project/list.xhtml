@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	
+	<ui:composition template="/template/main.xhtml">
+	<ui:define name="content">
+
+		<div class="toolbar">
+			<span class="title">Projects</span>
+			<h:form>
+				<p:commandButton value="Add" action="#{projectBean.add}"/>
+			</h:form>
+		</div>
+
+		<ui:repeat var="project" value="#{projectBean.projectList}" >
+			<article class="project-card">
+				<a href="#" class="title"><h:outputLabel value="#{project.name}"/></a>
+				<div class="progress">
+					<p:progressBar value="#{project.executionStatus}" labelTemplate="#{project.executionStatus}%"/>
+				</div>
+			</article>
+		</ui:repeat>		
+
+	</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
